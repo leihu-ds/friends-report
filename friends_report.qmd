@@ -28,3 +28,95 @@ through streaming platforms and reruns. Its success also led to the spin-off ser
 and the reunion special *Friends: The Reunion*.
 
 ![](friends.png){width=70%}
+
+# Data Analysis
+
+This section presents statistical information and visualizations related to the average 
+season viewership of this TV show.
+
+## Basic Statistics
+
+The following table summarizes the key statistics of the dataset, including ratings and 
+average viewership.
+
+```{python}
+#| echo: false
+import pandas as pd
+df = pd.read_csv("friends_data.csv")
+stats = df["Viewers"].describe().round(2)
+
+mean_viewers = round(stats["mean"], 1)
+max_viewers = round(stats["max"], 1)
+min_viewers = round(stats["min"], 1)
+std_viewers = round(stats["std"], 1)
+
+stats
+```
+
+As we can see from the basic statistics, the average season viewership of *Friends* was 
+approximately 25 million viewers. The highest average audience was 31.7 million viewers, 
+while the lowest average audience was 22.1 million viewers. The standard deviation of 
+approximately 2.63 million viewers suggests that the show's popularity remained relatively 
+stable throughout its ten seasons.
+
+
+## Viewership Over Time
+
+The following graph illustrates the average number of viewers per season from seasons 1 to 10.
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(10,5))
+ax.plot(
+    df["Season"],
+    df["Viewers"],
+    marker="o",
+    color="darkred"
+)
+
+ax.set_title("Friends Average Viewership by Season")
+ax.set_xlabel("Season")
+ax.set_ylabel("Viewers (millions)")
+ax.grid(True)
+
+plt.show()
+```
+
+The above graph shows that viewership increased significantly between season 1 and season 2, 
+which rises from 24.8 million viewers to 31.7 million viewers.
+
+However, the average audience gradually declined for several seasons after season 2 before 
+increasing again during season 8. Season 8 marked a significant recovery in audience numbers, 
+with average viewership increasing to 26.7 million viewers. It also became the highest-ranked 
+season of the series in U.S. television ratings.
+
+## Season-to-Season Changes
+
+The following graph presents the changes in average viewership between different seasons.
+
+```{python}
+#| echo: false
+df["Change"] = df["Viewers"].diff()
+fig, ax = plt.subplots(figsize=(10,5))
+ax.bar(
+    df["Season"],
+    df["Change"]
+)
+
+ax.set_title("Season-to-Season Change in Viewership")
+ax.set_xlabel("Season")
+ax.set_ylabel("Change in viewers (millions)")
+
+plt.show()
+```
+
+As we can see the season-to-season changes highlight several major shifts in audience behavior.
+
+The largest increase occurred between season 1 and season 2, when average viewership increased 
+by approximately 6.9 million viewers. And the largest decrease occurred between season 2 and 
+season 3, where the audience dropped by approximately 5.6 million viewers.
+
+Despite several declines in later seasons, the series maintained consistently high viewership 
+numbers throughout its entire runtime. Overall, the data demonstrates that *Friends* remained 
+one of the most successful and widely watched sitcoms in television history.
