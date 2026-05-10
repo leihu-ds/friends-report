@@ -18,14 +18,13 @@ The main characters are Rachel Green, Ross Geller, Monica Geller, Chandler Bing,
 and Phoebe Buffay, who experience friendships, romantic relationships, career challenges, 
 and personal growth throughout the series. Much of the story takes place in Monica’s 
 apartment and the Central Perk coffee shop.
+
 *Friends* became one of the most successful and influential sitcoms in television history. 
 All ten seasons ranked within the top ten television ratings in the United States, and the 
 show reached the number one position during its eighth season. The series finale aired on 
 May 6, 2004, and attracted approximately 52.5 million American viewers, which makes it one 
-of the most-watched television finales in history.
-The show received critical acclaim throughout its run and remains highly popular worldwide 
-through streaming platforms and reruns. Its success also led to the spin-off series *Joey* 
-and the reunion special *Friends: The Reunion*.
+of the most-watched television finales in history. Its success also led to the spin-off 
+series *Joey* and the reunion special *Friends: The Reunion*.
 
 ![](friends.png){width=70%}
 
@@ -67,7 +66,7 @@ The following graph illustrates the average number of viewers per season from se
 ```{python}
 #| echo: false
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots(figsize=(10,5))
+fig, ax = plt.subplots(figsize=(9,5))
 ax.plot(
     df["Season"],
     df["Viewers"],
@@ -98,7 +97,7 @@ The following graph presents the changes in average viewership between different
 ```{python}
 #| echo: false
 df["Change"] = df["Viewers"].diff()
-fig, ax = plt.subplots(figsize=(10,5))
+fig, ax = plt.subplots(figsize=(9,5))
 ax.bar(
     df["Season"],
     df["Change"]
@@ -120,3 +119,7 @@ season 3, where the audience dropped by approximately 5.6 million viewers.
 Despite several declines in later seasons, the series maintained consistently high viewership 
 numbers throughout its entire runtime. Overall, the data demonstrates that *Friends* remained 
 one of the most successful and widely watched sitcoms in television history.
+
+
+*Note: Some text sections were modified with the assistance of generative AI and later reviewed 
+manually.*
