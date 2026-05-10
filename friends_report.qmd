@@ -1,0 +1,30 @@
+---
+title: "TV Show Report - Friends"
+author: Lei Hu
+format:
+  html:
+    toc: true
+    theme: cosmo
+
+jupyter: python3
+---
+
+# Introduction
+
+*Friends* is an American television sitcom created by David Crane and Marta Kauffman. 
+The series aired on NBC from September 22, 1994, to May 6, 2004, and lasted for ten seasons.
+The show follows the everyday lives of six close friends living in Manhattan, New York City. 
+The main characters are Rachel Green, Ross Geller, Monica Geller, Chandler Bing, Joey Tribbiani, 
+and Phoebe Buffay, who experience friendships, romantic relationships, career challenges, 
+and personal growth throughout the series. Much of the story takes place in Monica’s 
+apartment and the Central Perk coffee shop.
+*Friends* became one of the most successful and influential sitcoms in television history. 
+All ten seasons ranked within the top ten television ratings in the United States, and the 
+show reached the number one position during its eighth season. The series finale aired on 
+May 6, 2004, and attracted approximately 52.5 million American viewers, which makes it one 
+of the most-watched television finales in history.
+The show received critical acclaim throughout its run and remains highly popular worldwide 
+through streaming platforms and reruns. Its success also led to the spin-off series *Joey* 
+and the reunion special *Friends: The Reunion*.
+
+![](friends.png){width=70%}
